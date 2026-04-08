@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories — BagBag</title>
+    <meta name="description" content="Browse all bag categories at BagBag — Backpacks, Sling Bags, Travel, Men's and Women's.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/bag.css">
+    <style>
+        .page-hero { background:var(--charcoal); padding:96px 32px 80px; text-align:center; }
+        .page-hero__label { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold-lt); margin-bottom:14px; }
+        .page-hero__title { font-family:'Playfair Display',serif; font-size:clamp(2.4rem,5vw,4rem); color:#fff; }
+        .category-wrap { max-width:1300px; margin:0 auto; padding:80px 32px; }
+        .big-cat-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:28px; margin-bottom:56px; }
+        .big-cat { position:relative; overflow:hidden; border-radius:20px; aspect-ratio:16/9; display:block; }
+        .big-cat img { width:100%; height:100%; object-fit:cover; transition:transform .8s; }
+        .big-cat:hover img { transform:scale(1.05); }
+        .big-cat::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 55%); }
+        .big-cat__body { position:absolute; bottom:28px; left:28px; z-index:2; color:#fff; }
+        .big-cat__body h3 { font-family:'Playfair Display',serif; font-size:2rem; color:#fff; margin-bottom:6px; }
+        .big-cat__body p { font-size:.85rem; opacity:.8; }
+        .cat-sub-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+        .sub-cat { display:block; background:var(--cream-dk); border-radius:14px; overflow:hidden; transition:all .35s; }
+        .sub-cat:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(0,0,0,.12); }
+        .sub-cat img { width:100%; aspect-ratio:3/4; object-fit:cover; transition:transform .6s; }
+        .sub-cat:hover img { transform:scale(1.05); }
+        .sub-cat__body { padding:18px; }
+        .sub-cat__body h4 { font-family:'Playfair Display',serif; font-size:1.15rem; margin-bottom:4px; }
+        .sub-cat__body p { font-size:.78rem; color:var(--gold); font-weight:600; letter-spacing:1px; text-transform:uppercase; }
+        @media(max-width:768px){ .big-cat-grid,.cat-sub-grid{ grid-template-columns:1fr; } }
+        @media(max-width:480px){ .cat-sub-grid{ grid-template-columns:repeat(2,1fr); } }
+    </style>
+</head>
+<body>
+
+    <div class="ann-bar"><span class="ann-bar__text">✦ FREE SHIPPING OVER $50 &nbsp;|&nbsp; CODE: GET10 FOR 10% OFF ✦</span></div>
+
+    <header class="hdr" id="hdr">
+        <div class="hdr__inner">
+            <button class="hdr__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+            <a href="index.html" class="hdr__logo">BagBag.</a>
+            <nav class="hdr__nav" id="mainNav">
+                <ul class="hnav__list">
+                    <li><a href="index.html" class="hnav__link">Home</a></li>
+                    <li><a href="arrivals.html" class="hnav__link">Shop</a></li>
+                    <li><a href="category.html" class="hnav__link active">Categories</a></li>
+                    <li><a href="gallery.html" class="hnav__link">Gallery</a></li>
+                    <li><a href="aboutus.html" class="hnav__link">About</a></li>
+                    <li><a href="contactus.html" class="hnav__link">Contact</a></li>
+                </ul>
+                <button class="hnav__close" id="navClose">✕</button>
+            </nav>
+            <div class="hdr__icons">
+                <button class="hdr-icon" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="hdr-icon cart-icon"><i class="fa-solid fa-bag-shopping"></i><span class="cart-badge">0</span></button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="page-hero">
+            <p class="page-hero__label">Browse All</p>
+            <h1 class="page-hero__title">Shop by <em>Category</em></h1>
+        </div>
+
+        <div class="category-wrap">
+            <div class="sec-hd"><span class="sec-label">Featured</span><h2 class="sec-title">Top Categories</h2></div>
+            <div class="big-cat-grid">
+                <a href="arrivals.html" class="big-cat">
+                    <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=900&q=80" alt="Men's">
+                    <div class="big-cat__body"><h3>Men's Collection</h3><p>31 items available</p></div>
+                </a>
+                <a href="arrivals.html" class="big-cat">
+                    <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=900&q=80" alt="Women's">
+                    <div class="big-cat__body"><h3>Women's Collection</h3><p>40 items available</p></div>
+                </a>
+            </div>
+
+            <div class="sec-hd" style="margin-top:60px;"><span class="sec-label">All Types</span><h2 class="sec-title">Browse by Style</h2></div>
+            <div class="cat-sub-grid">
+                <a href="arrivals.html" class="sub-cat"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80" alt="Backpacks"><div class="sub-cat__body"><h4>Backpacks</h4><p>24 Items</p></div></a>
+                <a href="arrivals.html" class="sub-cat"><img src="https://images.unsplash.com/photo-1628149462831-7b068ebcaeb3?auto=format&fit=crop&w=600&q=80" alt="Sling Bags"><div class="sub-cat__body"><h4>Sling Bags</h4><p>18 Items</p></div></a>
+                <a href="arrivals.html" class="sub-cat"><img src="https://images.unsplash.com/photo-1553531580-60ce379f8319?auto=format&fit=crop&w=600&q=80" alt="Travel Bags"><div class="sub-cat__body"><h4>Travel Bags</h4><p>12 Items</p></div></a>
+                <a href="arrivals.html" class="sub-cat"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80" alt="Totes"><div class="sub-cat__body"><h4>Totes</h4><p>15 Items</p></div></a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand"><a href="index.html" class="footer__logo">BagBag.</a><p>Elevating everyday carry since 2010.</p><div class="footer__soc"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
+            <div class="footer__col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="arrivals.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="aboutus.html">About</a></li></ul></div>
+            <div class="footer__col"><h4>Help</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="contactus.html">Contact</a></li><li><a href="feedback.html">Feedback</a></li></ul></div>
+            <div class="footer__col"><h4>Contact</h4><p><i class="fa-solid fa-envelope"></i> BagBagOfficial@gmail.com</p><p><i class="fa-solid fa-phone"></i> +92-390-04587381</p></div>
+        </div>
+        <div class="footer__btm"><p>&copy; 2026 BagBag. All rights reserved.</p><p>Made with <i class="fa-solid fa-heart" style="color:#C9A84C"></i> in Pakistan</p></div>
+    </footer>
+    <script src="../js/bagbag.js"></script>
+</body>
+</html>

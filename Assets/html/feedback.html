@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback — BagBag</title>
+    <meta name="description" content="Share your experience with BagBag. Your feedback helps us improve.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/bag.css">
+    <style>
+        .page-hero { background:var(--charcoal); padding:96px 32px 80px; text-align:center; }
+        .page-hero__label { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold-lt); margin-bottom:14px; }
+        .page-hero__title { font-family:'Playfair Display',serif; font-size:clamp(2.4rem,5vw,4rem); color:#fff; }
+        .feedback-wrap { max-width:780px; margin:0 auto; padding:80px 32px; }
+        .feedback-wrap > p { font-size:1.1rem; line-height:1.85; color:var(--txt); text-align:center; margin-bottom:48px; }
+        .star-rating { display:flex; justify-content:center; gap:10px; margin-bottom:36px; }
+        .star-rating input { display:none; }
+        .star-rating label { font-size:2.4rem; color:#ddd; cursor:pointer; transition:color .2s; }
+        .star-rating input:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label { color:#ddd; }
+        .star-rating label:hover,
+        .star-rating input:checked + label { color:var(--gold); }
+        .star-label { text-align:center; font-size:.85rem; font-weight:600; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:36px; min-height:20px; }
+        .reviews { margin-top:64px; }
+        .review-card { background:#fff; border-radius:14px; padding:28px; margin-bottom:18px; border:1px solid var(--border); }
+        .review-card__top { display:flex; align-items:center; gap:16px; margin-bottom:14px; }
+        .review-card__avatar { width:48px; height:48px; border-radius:50%; background:var(--charcoal); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; flex-shrink:0; }
+        .review-card__meta h4 { font-family:'Playfair Display',serif; font-size:1.05rem; margin-bottom:2px; }
+        .review-card__stars { color:var(--gold); font-size:.85rem; }
+        .review-card__meta span { font-size:.78rem; color:var(--txt-lt); margin-left:8px; }
+        .review-card p { font-size:.95rem; line-height:1.8; color:var(--txt); }
+    </style>
+</head>
+<body>
+
+    <div class="ann-bar"><span class="ann-bar__text">✦ FREE SHIPPING OVER $50 &nbsp;|&nbsp; CODE: GET10 FOR 10% OFF ✦</span></div>
+
+    <header class="hdr" id="hdr">
+        <div class="hdr__inner">
+            <button class="hdr__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+            <a href="index.html" class="hdr__logo">BagBag.</a>
+            <nav class="hdr__nav" id="mainNav">
+                <ul class="hnav__list">
+                    <li><a href="index.html" class="hnav__link">Home</a></li>
+                    <li><a href="arrivals.html" class="hnav__link">Shop</a></li>
+                    <li><a href="category.html" class="hnav__link">Categories</a></li>
+                    <li><a href="gallery.html" class="hnav__link">Gallery</a></li>
+                    <li><a href="aboutus.html" class="hnav__link">About</a></li>
+                    <li><a href="contactus.html" class="hnav__link">Contact</a></li>
+                </ul>
+                <button class="hnav__close" id="navClose">✕</button>
+            </nav>
+            <div class="hdr__icons">
+                <button class="hdr-icon" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="hdr-icon cart-icon"><i class="fa-solid fa-bag-shopping"></i><span class="cart-badge">0</span></button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="page-hero">
+            <p class="page-hero__label">Share Your Experience</p>
+            <h1 class="page-hero__title">Your <em>Feedback</em></h1>
+        </div>
+
+        <div class="feedback-wrap">
+            <p>We take every piece of feedback seriously. Tell us about your experience and help us make BagBag even better for everyone.</p>
+
+            <div class="cform-card">
+                <h3>Leave a Review</h3>
+                <div class="star-rating">
+                    <input type="radio" id="s5" name="rating" value="5"><label for="s5"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="s4" name="rating" value="4"><label for="s4"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="s3" name="rating" value="3"><label for="s3"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="s2" name="rating" value="2"><label for="s2"><i class="fa-solid fa-star"></i></label>
+                    <input type="radio" id="s1" name="rating" value="1"><label for="s1"><i class="fa-solid fa-star"></i></label>
+                </div>
+                <p class="star-label" id="starLabel">Click a star to rate</p>
+
+                <form id="cform">
+                    <div class="cfield">
+                        <input type="text" id="cf-name" class="cfield__input" placeholder=" ">
+                        <label class="cfield__lbl" for="cf-name">Your Name</label>
+                        <span class="cfield__err" id="cname-err"></span>
+                    </div>
+                    <div class="cfield">
+                        <input type="email" id="cf-email" class="cfield__input" placeholder=" ">
+                        <label class="cfield__lbl" for="cf-email">Email Address</label>
+                        <span class="cfield__err" id="cemail-err"></span>
+                    </div>
+                    <div class="cfield">
+                        <textarea id="cf-msg" class="cfield__input cfield__input--ta" placeholder=" " rows="5"></textarea>
+                        <label class="cfield__lbl cfield__lbl--ta" for="cf-msg">Your Review</label>
+                        <span class="cfield__err" id="cmsg-err"></span>
+                    </div>
+                    <button type="submit" class="btn btn--dark" style="width:100%;justify-content:center;">Submit Review</button>
+                    <div class="cform-ok hidden" id="cform-ok"><i class="fa-solid fa-circle-check"></i> Thank you! Your review has been submitted.</div>
+                </form>
+            </div>
+
+            <div class="reviews">
+                <div class="sec-hd"><span class="sec-label">Community</span><h2 class="sec-title">What Customers Say</h2></div>
+                <div class="review-card">
+                    <div class="review-card__top"><div class="review-card__avatar">A</div><div class="review-card__meta"><h4>Ahmed K.</h4><div class="review-card__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>March 2026</span></div></div></div>
+                    <p>Absolutely stunning quality. The Urban Explorer Pack is built like a tank, and the leather only gets better after a few weeks of use. Worth every rupee!</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-card__top"><div class="review-card__avatar" style="background:var(--gold)">S</div><div class="review-card__meta"><h4>Sara M.</h4><div class="review-card__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>February 2026</span></div></div></div>
+                    <p>Bought the Elegant Leather Sling as a gift for my sister and she absolutely loves it. Fast delivery and beautiful packaging. Will order again!</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-card__top"><div class="review-card__avatar" style="background:#2C2C29">Z</div><div class="review-card__meta"><h4>Zainab F.</h4><div class="review-card__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>January 2026</span></div></div></div>
+                    <p>The customer service team was incredibly helpful when I needed to exchange a size. Fast response, seamless process. BagBag is my go-to brand now.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand"><a href="index.html" class="footer__logo">BagBag.</a><p>Elevating everyday carry since 2010.</p><div class="footer__soc"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
+            <div class="footer__col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="arrivals.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="aboutus.html">About</a></li></ul></div>
+            <div class="footer__col"><h4>Help</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="contactus.html">Contact</a></li><li><a href="feedback.html">Feedback</a></li></ul></div>
+            <div class="footer__col"><h4>Contact</h4><p><i class="fa-solid fa-envelope"></i> BagBagOfficial@gmail.com</p><p><i class="fa-solid fa-phone"></i> +92-390-04587381</p></div>
+        </div>
+        <div class="footer__btm"><p>&copy; 2026 BagBag. All rights reserved.</p><p>Made with <i class="fa-solid fa-heart" style="color:#C9A84C"></i> in Pakistan</p></div>
+    </footer>
+
+    <script src="../js/bagbag.js"></script>
+    <script>
+        const labels = ['', 'Not happy', 'Could be better', 'Good experience', 'Really happy!', 'Absolutely loved it! ⭐'];
+        document.querySelectorAll('.star-rating input').forEach(inp => {
+            inp.addEventListener('change', () => {
+                document.getElementById('starLabel').textContent = labels[inp.value];
+            });
+        });
+    </script>
+</body>
+</html>

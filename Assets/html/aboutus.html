@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — BagBag</title>
+    <meta name="description" content="Learn about the story and craftsmanship behind BagBag premium leather goods.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/bag.css">
+    <style>
+        .page-hero { background:var(--charcoal); padding:96px 32px 80px; text-align:center; }
+        .page-hero__label { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold-lt); margin-bottom:14px; }
+        .page-hero__title { font-family:'Playfair Display',serif; font-size:clamp(2.4rem,5vw,4rem); color:#fff; }
+        .page-content { max-width:1100px; margin:0 auto; padding:80px 32px; }
+        .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; margin-bottom:80px; }
+        .about-grid img { width:100%; border-radius:16px; object-fit:cover; aspect-ratio:4/5; }
+        .about-grid h2 { font-family:'Playfair Display',serif; font-size:2.6rem; margin-bottom:20px; }
+        .about-grid p { font-size:1.05rem; line-height:1.85; color:var(--txt); margin-bottom:16px; }
+        .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:64px; }
+        .value-card { background:#fff; padding:36px; border-radius:16px; border:1px solid var(--border); }
+        .value-card i { font-size:2.2rem; color:var(--gold); margin-bottom:16px; display:block; }
+        .value-card h3 { font-family:'Playfair Display',serif; font-size:1.4rem; margin-bottom:10px; }
+        .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:24px; }
+        .team-card { text-align:center; }
+        .team-card img { width:100%; aspect-ratio:1; object-fit:cover; border-radius:50%; margin-bottom:16px; }
+        .team-card h4 { font-family:'Playfair Display',serif; font-size:1.2rem; }
+        .team-card p { font-size:.85rem; color:var(--gold); font-weight:600; letter-spacing:1px; text-transform:uppercase; }
+        @media(max-width:768px){ .about-grid,.values-grid,.team-grid{ grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="ann-bar"><span class="ann-bar__text">✦ FREE SHIPPING OVER $50 &nbsp;|&nbsp; CODE: GET10 FOR 10% OFF ✦</span></div>
+
+    <header class="hdr" id="hdr">
+        <div class="hdr__inner">
+            <button class="hdr__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+            <a href="index.html" class="hdr__logo">BagBag.</a>
+            <nav class="hdr__nav" id="mainNav">
+                <ul class="hnav__list">
+                    <li><a href="index.html" class="hnav__link">Home</a></li>
+                    <li><a href="arrivals.html" class="hnav__link">Shop</a></li>
+                    <li><a href="category.html" class="hnav__link">Categories</a></li>
+                    <li><a href="gallery.html" class="hnav__link">Gallery</a></li>
+                    <li><a href="aboutus.html" class="hnav__link active">About</a></li>
+                    <li><a href="contactus.html" class="hnav__link">Contact</a></li>
+                </ul>
+                <button class="hnav__close" id="navClose">✕</button>
+            </nav>
+            <div class="hdr__icons">
+                <button class="hdr-icon" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="hdr-icon cart-icon" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-badge">0</span></button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="page-hero">
+            <p class="page-hero__label">Our Story</p>
+            <h1 class="page-hero__title">Built Different,<br><em>By Design.</em></h1>
+        </div>
+
+        <div class="page-content">
+            <div class="about-grid">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" alt="Craftsmanship">
+                <div>
+                    <h2>Passion for Craft Since 2010</h2>
+                    <p>At BagBag, every piece is a conversation between material, form, and function. We were founded with a single belief: that what you carry should be as intentional as where you're going.</p>
+                    <p>We source only the finest full-grain leathers, work with local artisans, and refuse to cut corners. Each bag is crafted by hand — inspected, stitched, and finished with pride.</p>
+                    <p>Over 15 years later, that commitment has never wavered. We have served over 80,000 happy customers across Pakistan and beyond.</p>
+                    <div class="about__stats" style="margin-top:36px;">
+                        <div class="astat"><span class="astat__num">15+</span><span class="astat__lbl">Years of Craft</span></div>
+                        <div class="astat"><span class="astat__num">80k+</span><span class="astat__lbl">Happy Customers</span></div>
+                        <div class="astat"><span class="astat__num">120+</span><span class="astat__lbl">Designs</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sec-hd"><span class="sec-label">What Drives Us</span><h2 class="sec-title">Our Core Values</h2></div>
+            <div class="values-grid">
+                <div class="value-card"><i class="fa-solid fa-hand-sparkles"></i><h3>Handcrafted Quality</h3><p>Every stitch is placed by skilled artisans. No shortcuts. No compromises.</p></div>
+                <div class="value-card"><i class="fa-solid fa-leaf"></i><h3>Sustainable Materials</h3><p>We source ethically, choosing materials that are good for people and the planet.</p></div>
+                <div class="value-card"><i class="fa-solid fa-infinity"></i><h3>Built to Last</h3><p>We design for decades, not seasons. Our bags only get better with time.</p></div>
+            </div>
+
+            <div class="sec-hd" style="margin-top:80px;"><span class="sec-label">Meet the Family</span><h2 class="sec-title">Our Team</h2></div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Founder">
+                    <h4>Ahmed Raza</h4><p>Founder & CEO</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80" alt="Designer">
+                    <h4>Sara Khan</h4><p>Head of Design</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" alt="Artisan">
+                    <h4>Usman Ali</h4><p>Master Artisan</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand"><a href="index.html" class="footer__logo">BagBag.</a><p>Elevating everyday carry since 2010.</p><div class="footer__soc"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
+            <div class="footer__col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="arrivals.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="aboutus.html">About</a></li></ul></div>
+            <div class="footer__col"><h4>Help</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="contactus.html">Contact</a></li><li><a href="feedback.html">Feedback</a></li></ul></div>
+            <div class="footer__col"><h4>Contact</h4><p><i class="fa-solid fa-envelope"></i> BagBagOfficial@gmail.com</p><p><i class="fa-solid fa-phone"></i> +92-390-04587381</p></div>
+        </div>
+        <div class="footer__btm"><p>&copy; 2026 BagBag. All rights reserved.</p><p>Made with <i class="fa-solid fa-heart" style="color:#C9A84C"></i> in Pakistan</p></div>
+    </footer>
+
+    <script src="../js/bagbag.js"></script>
+</body>
+</html>

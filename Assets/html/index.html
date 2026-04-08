@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BagBag — Carry Your World</title>
+    <meta name="description" content="Premium handcrafted bags for modern lives. Shop the new BagBag collection.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/bag.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="ann-bar">
+        <span class="ann-bar__text">✦ FREE SHIPPING ON ORDERS OVER $50 &nbsp;&nbsp;|&nbsp;&nbsp; USE CODE <strong>GET10</strong> FOR 10% OFF &nbsp;&nbsp;|&nbsp;&nbsp; NEW COLLECTION NOW LIVE ✦</span>
+    </div>
+
+    <!-- Header -->
+    <header class="hdr" id="hdr">
+        <div class="hdr__inner">
+            <button class="hdr__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+            <a href="index.html" class="hdr__logo">BagBag.</a>
+            <nav class="hdr__nav" id="mainNav">
+                <ul class="hnav__list">
+                    <li><a href="index.html" class="hnav__link active">Home</a></li>
+                    <li><a href="arrivals.html" class="hnav__link">Shop</a></li>
+                    <li><a href="category.html" class="hnav__link">Categories</a></li>
+                    <li><a href="sale.html" class="hnav__link">Sale</a></li>
+                    <li><a href="gallery.html" class="hnav__link">Gallery</a></li>
+                    <li><a href="aboutus.html" class="hnav__link">About</a></li>
+                    <li><a href="contactus.html" class="hnav__link">Contact</a></li>
+                </ul>
+                <button class="hnav__close" id="navClose">✕</button>
+            </nav>
+            <div class="hdr__icons">
+                <button class="hdr-icon" id="searchOpen" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hdr-icon" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="hdr-icon cart-icon" aria-label="Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+        <!-- Search Drop -->
+        <div class="search-drop" id="searchDrop">
+            <div class="search-drop__inner">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search bags, categories…" class="search-drop__input">
+                <button class="search-drop__close" id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nav Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <!-- ── HERO SLIDER ── -->
+        <section class="hero" id="hero">
+            <div class="hero__track" id="heroTrack">
+                <div class="hero__slide">
+                    <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1920&q=80')"></div>
+                    <div class="hero__content">
+                        <span class="hero__badge">New Arrivals · 2026</span>
+                        <h1 class="hero__title">The Art Of<br><em>Carrying Less.</em></h1>
+                        <p class="hero__desc">Handcrafted leather goods built for a lifetime of adventures.</p>
+                        <div class="hero__actions">
+                            <a href="#shop" class="btn btn--cream">Shop Now</a>
+                            <a href="#gallery" class="btn btn--ghost">View Lookbook</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__slide">
+                    <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1920&q=80')"></div>
+                    <div class="hero__content">
+                        <span class="hero__badge">Travel Collection</span>
+                        <h1 class="hero__title">Wander With<br><em>Intention.</em></h1>
+                        <p class="hero__desc">Durable, refined travel bags made for the modern explorer.</p>
+                        <div class="hero__actions">
+                            <a href="#shop" class="btn btn--cream">Explore Travel Bags</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__slide">
+                    <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1920&q=80')"></div>
+                    <div class="hero__content">
+                        <span class="hero__badge">Women's Edit</span>
+                        <h1 class="hero__title">Define Your<br><em>Every Look.</em></h1>
+                        <p class="hero__desc">Curated silhouettes that turn heads wherever you go.</p>
+                        <div class="hero__actions">
+                            <a href="#shop" class="btn btn--cream">Shop Women's</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__ctrl">
+                <button class="hero__arr" id="heroPrev"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="hero__dots" id="heroDots"></div>
+                <button class="hero__arr" id="heroNext"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- ── SERVICES ── -->
+        <section class="services">
+            <div class="services__grid">
+                <div class="svc"><i class="fa-solid fa-truck-fast"></i><span>Free Delivery Over $50</span></div>
+                <div class="svc"><i class="fa-solid fa-rotate-left"></i><span>30-Day Free Returns</span></div>
+                <div class="svc"><i class="fa-solid fa-shield-halved"></i><span>Lifetime Warranty</span></div>
+                <div class="svc"><i class="fa-solid fa-headset"></i><span>24/7 Support</span></div>
+            </div>
+        </section>
+
+        <!-- ── CATEGORIES ── -->
+        <section class="cats" id="categories">
+            <div class="sec-hd">
+                <span class="sec-label">Browse</span>
+                <h2 class="sec-title">Shop by Category</h2>
+            </div>
+            <div class="cats__grid">
+                <a class="cat-card" href="#shop" data-filter="backpack">
+                    <div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80" alt="Backpacks" loading="lazy"></div>
+                    <div class="cat-card__body"><h3>Backpacks</h3><p>24 items</p></div>
+                </a>
+                <a class="cat-card" href="#shop" data-filter="sling">
+                    <div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1628149462831-7b068ebcaeb3?auto=format&fit=crop&w=800&q=80" alt="Sling Bags" loading="lazy"></div>
+                    <div class="cat-card__body"><h3>Sling Bags</h3><p>18 items</p></div>
+                </a>
+                <a class="cat-card" href="#shop" data-filter="men">
+                    <div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80" alt="Men" loading="lazy"></div>
+                    <div class="cat-card__body"><h3>Men's</h3><p>31 items</p></div>
+                </a>
+                <a class="cat-card" href="#shop" data-filter="women">
+                    <div class="cat-card__img-wrap"><img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=800&q=80" alt="Women" loading="lazy"></div>
+                    <div class="cat-card__body"><h3>Women's</h3><p>40 items</p></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ── SHOP / PRODUCTS ── -->
+        <section class="shop" id="shop">
+            <div class="sec-hd">
+                <span class="sec-label">Our Range</span>
+                <h2 class="sec-title">Latest Collection</h2>
+            </div>
+            <div class="filters" id="filters">
+                <button class="fpill active" data-filter="all">All</button>
+                <button class="fpill" data-filter="men">Men</button>
+                <button class="fpill" data-filter="women">Women</button>
+                <button class="fpill" data-filter="backpack">Backpacks</button>
+                <button class="fpill" data-filter="sling">Sling Bags</button>
+            </div>
+            <div class="pgrid" id="pgrid">
+
+                <article class="pcard" data-cat="men backpack">
+                    <div class="pcard__img-box">
+                        <span class="pcard__tag">New</span>
+                        <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=600&q=80" alt="Urban Pack" class="pcard__img" loading="lazy">
+                        <div class="pcard__hover">
+                            <button class="pcard__qv" data-title="Urban Explorer Pack" data-price="$129" data-cat="Men · Backpack" data-src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80">Quick View</button>
+                            <button class="pcard__wish"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="pcard__info">
+                        <p class="pcard__cat">Men · Backpack</p>
+                        <h3 class="pcard__name">Urban Explorer Pack</h3>
+                        <p class="pcard__price">Rs 12,900</p>
+                    </div>
+                </article>
+
+                <article class="pcard" data-cat="women sling">
+                    <div class="pcard__img-box">
+                        <span class="pcard__tag pcard__tag--sale">–20%</span>
+                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=600&q=80" alt="Sling" class="pcard__img" loading="lazy">
+                        <div class="pcard__hover">
+                            <button class="pcard__qv" data-title="Elegant Leather Sling" data-price="Rs 6,900" data-cat="Women · Sling" data-src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=800&q=80">Quick View</button>
+                            <button class="pcard__wish"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="pcard__info">
+                        <p class="pcard__cat">Women · Sling</p>
+                        <h3 class="pcard__name">Elegant Leather Sling</h3>
+                        <p class="pcard__price"><s class="pcard__old">Rs 8,900</s> Rs 6,900</p>
+                    </div>
+                </article>
+
+                <article class="pcard" data-cat="men sling">
+                    <div class="pcard__img-box">
+                        <img src="https://images.unsplash.com/photo-1554336416-caeb280c4109?auto=format&fit=crop&w=600&q=80" alt="Crossbody" class="pcard__img" loading="lazy">
+                        <div class="pcard__hover">
+                            <button class="pcard__qv" data-title="Minimalist Crossbody" data-price="Rs 5,500" data-cat="Men · Sling" data-src="https://images.unsplash.com/photo-1554336416-caeb280c4109?auto=format&fit=crop&w=800&q=80">Quick View</button>
+                            <button class="pcard__wish"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="pcard__info">
+                        <p class="pcard__cat">Men · Sling</p>
+                        <h3 class="pcard__name">Minimalist Crossbody</h3>
+                        <p class="pcard__price">Rs 5,500</p>
+                    </div>
+                </article>
+
+                <article class="pcard" data-cat="women backpack">
+                    <div class="pcard__img-box">
+                        <span class="pcard__tag pcard__tag--hot">Hot</span>
+                        <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=600&q=80" alt="Canvas" class="pcard__img" loading="lazy">
+                        <div class="pcard__hover">
+                            <button class="pcard__qv" data-title="Classic Canvas Backpack" data-price="Rs 9,500" data-cat="Women · Backpack" data-src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=800&q=80">Quick View</button>
+                            <button class="pcard__wish"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="pcard__info">
+                        <p class="pcard__cat">Women · Backpack</p>
+                        <h3 class="pcard__name">Classic Canvas Backpack</h3>
+                        <p class="pcard__price">Rs 9,500</p>
+                    </div>
+                </article>
+
+                <article class="pcard" data-cat="men backpack">
+                    <div class="pcard__img-box">
+                        <img src="https://images.unsplash.com/photo-1553531580-60ce379f8319?auto=format&fit=crop&w=600&q=80" alt="Nomad" class="pcard__img" loading="lazy">
+                        <div class="pcard__hover">
+                            <button class="pcard__qv" data-title="Nomad Travel Pack" data-price="Rs 14,500" data-cat="Men · Travel" data-src="https://images.unsplash.com/photo-1553531580-60ce379f8319?auto=format&fit=crop&w=800&q=80">Quick View</button>
+                            <button class="pcard__wish"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="pcard__info">
+                        <p class="pcard__cat">Men · Travel</p>
+                        <h3 class="pcard__name">Nomad Travel Pack</h3>
+                        <p class="pcard__price">Rs 14,500</p>
+                    </div>
+                </article>
+
+                <article class="pcard" data-cat="women backpack">
+                    <div class="pcard__img-box">
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80" alt="Tote" class="pcard__img" loading="lazy">
+                        <div class="pcard__hover">
+                            <button class="pcard__qv" data-title="Premium Leather Tote" data-price="Rs 21,000" data-cat="Women · Tote" data-src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80">Quick View</button>
+                            <button class="pcard__wish"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="pcard__info">
+                        <p class="pcard__cat">Women · Tote</p>
+                        <h3 class="pcard__name">Premium Leather Tote</h3>
+                        <p class="pcard__price">Rs 21,000</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ── PROMO BAND ── -->
+        <section class="promo-band">
+            <div class="promo-band__inner">
+                <h2>Up to 70% Off — Sale Ends Sunday.</h2>
+                <a href="#shop" class="btn btn--cream">Shop Sale &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- ── BRANDS ── -->
+        <section class="brands" id="brands">
+            <div class="sec-hd">
+                <span class="sec-label">Partners</span>
+                <h2 class="sec-title">Brands We Carry</h2>
+            </div>
+            <div class="brands__grid">
+                <div class="blogo">Nike</div>
+                <div class="blogo">Adidas</div>
+                <div class="blogo">Gucci</div>
+                <div class="blogo">Puma</div>
+                <div class="blogo">Fossil</div>
+                <div class="blogo">Calvin Klein</div>
+            </div>
+        </section>
+
+        <!-- ── GALLERY ── -->
+        <section class="gallery" id="gallery">
+            <div class="sec-hd">
+                <span class="sec-label">Lookbook</span>
+                <h2 class="sec-title">Style Gallery</h2>
+            </div>
+            <div class="gallery__grid">
+                <div class="gitem gitem--tall">
+                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80" alt="Look 1" loading="lazy">
+                    <div class="gitem__ov"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gitem">
+                    <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=600&q=80" alt="Look 2" loading="lazy">
+                    <div class="gitem__ov"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gitem">
+                    <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80" alt="Look 3" loading="lazy">
+                    <div class="gitem__ov"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gitem gitem--wide">
+                    <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=900&q=80" alt="Look 4" loading="lazy">
+                    <div class="gitem__ov"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gitem">
+                    <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=600&q=80" alt="Look 5" loading="lazy">
+                    <div class="gitem__ov"><i class="fa-solid fa-expand"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── ABOUT + CONTACT ── -->
+        <section class="about" id="about">
+            <div class="about__left">
+                <span class="sec-label">Our Story</span>
+                <h2 class="sec-title" style="text-align:left;max-width:100%">Built Different,<br>By Design.</h2>
+                <p>At BagBag, every piece is a conversation between material, form, and function. Founded in 2010, we have been obsessed with making bags worthy of everyday life — and worthy of passing down.</p>
+                <p>We source only the finest full-grain leathers and work with local artisans.</p>
+                <div class="about__stats">
+                    <div class="astat"><span class="astat__num">15+</span><span class="astat__lbl">Years of Craft</span></div>
+                    <div class="astat"><span class="astat__num">80k+</span><span class="astat__lbl">Happy Customers</span></div>
+                    <div class="astat"><span class="astat__num">120+</span><span class="astat__lbl">Designs</span></div>
+                </div>
+                <button class="btn btn--dark" id="dlBtn"><i class="fa-solid fa-download"></i> &nbsp;Download Catalog</button>
+            </div>
+            <div class="about__right" id="contact">
+                <div class="cform-card">
+                    <h3>Send Us a Message</h3>
+                    <form id="cform">
+                        <div class="cfield">
+                            <input type="text" id="cf-name" class="cfield__input" placeholder=" ">
+                            <label class="cfield__lbl" for="cf-name">Full Name</label>
+                            <span class="cfield__err" id="cname-err"></span>
+                        </div>
+                        <div class="cfield">
+                            <input type="email" id="cf-email" class="cfield__input" placeholder=" ">
+                            <label class="cfield__lbl" for="cf-email">Email Address</label>
+                            <span class="cfield__err" id="cemail-err"></span>
+                        </div>
+                        <div class="cfield">
+                            <textarea id="cf-msg" class="cfield__input cfield__input--ta" placeholder=" " rows="4"></textarea>
+                            <label class="cfield__lbl cfield__lbl--ta" for="cf-msg">Your Message</label>
+                            <span class="cfield__err" id="cmsg-err"></span>
+                        </div>
+                        <button type="submit" class="btn btn--dark" style="width:100%;justify-content:center;">Send Message</button>
+                        <div class="cform-ok hidden" id="cform-ok"><i class="fa-solid fa-circle-check"></i> Sent! We'll reply within 24h.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FAQ ── -->
+        <section class="faq">
+            <div class="sec-hd">
+                <span class="sec-label">Help</span>
+                <h2 class="sec-title">Frequently Asked</h2>
+            </div>
+            <div class="faq__list">
+                <div class="faq__item">
+                    <button class="faq__q">Do you ship internationally? <i class="fa-solid fa-plus faq__ico"></i></button>
+                    <div class="faq__ans"><p>Yes — we ship worldwide. Most orders arrive within 7–14 business days depending on region.</p></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q">What is your returns policy? <i class="fa-solid fa-plus faq__ico"></i></button>
+                    <div class="faq__ans"><p>We accept returns within 30 days for unused items in original packaging.</p></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q">How do I care for my leather bag? <i class="fa-solid fa-plus faq__ico"></i></button>
+                    <div class="faq__ans"><p>Apply a leather conditioner every 6 months and keep away from direct sunlight. Store in a dust bag when not in use.</p></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q">Do bags carry a warranty? <i class="fa-solid fa-plus faq__ico"></i></button>
+                    <div class="faq__ans"><p>All premium leather bags come with a lifetime warranty against manufacturing defects.</p></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <a href="#hero" class="footer__logo">BagBag.</a>
+                <p>Elevating everyday carry since 2010. Handcrafted with care, built to last.</p>
+                <div class="footer__soc">
+                    <a href="https://www.whatsapp.com/" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Sitemap</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-envelope"></i> BagBagOfficial@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +92-390-04587381</p>
+                <p><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</p>
+            </div>
+        </div>
+        <div class="footer__btm">
+            <p>&copy; 2026 BagBag. All rights reserved.</p>
+            <p>Made with <i class="fa-solid fa-heart" style="color:#C9A84C"></i> in Pakistan</p>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="qv-backdrop" id="qvBackdrop">
+        <div class="qv-modal" id="qvModal">
+            <button class="qv-modal__close" id="qvClose"><i class="fa-solid fa-xmark"></i></button>
+            <div class="qv-modal__body">
+                <div class="qv-modal__img-wrap"><img id="qvImg" src="" alt=""></div>
+                <div class="qv-modal__det">
+                    <p class="qv-modal__cat" id="qvCat"></p>
+                    <h2 class="qv-modal__title" id="qvTitle"></h2>
+                    <p class="qv-modal__price" id="qvPrice"></p>
+                    <p class="qv-modal__desc">Premium handcrafted full-grain leather. Only gets better with age.</p>
+                    <ul class="qv-modal__specs">
+                        <li><strong>Material:</strong> Full-Grain Leather</li>
+                        <li><strong>Hardware:</strong> Solid Brass</li>
+                        <li><strong>Lining:</strong> Canvas</li>
+                    </ul>
+                    <button class="btn btn--dark" style="width:100%;justify-content:center;margin-top:24px;" id="qvAddCart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" id="lbClose"><i class="fa-solid fa-xmark"></i></button>
+        <img class="lightbox__img" id="lbImg" src="" alt="">
+    </div>
+
+    <script src="../js/bagbag.js"></script>
+</body>
+</html>

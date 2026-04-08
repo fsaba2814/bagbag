@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — BagBag</title>
+    <meta name="description" content="Explore the BagBag style gallery and lookbook.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/bag.css">
+    <style>
+        .page-hero { background:var(--charcoal); padding:96px 32px 80px; text-align:center; }
+        .page-hero__label { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold-lt); margin-bottom:14px; }
+        .page-hero__title { font-family:'Playfair Display',serif; font-size:clamp(2.4rem,5vw,4rem); color:#fff; }
+        .gal-wrap { max-width:1300px; margin:0 auto; padding:72px 32px; }
+        .full-gallery { columns:3; column-gap:16px; }
+        .full-gallery .gitem { break-inside:avoid; margin-bottom:16px; border-radius:12px; }
+        .full-gallery .gitem img { width:100%; display:block; border-radius:12px; transition:transform .6s; }
+        .full-gallery .gitem:hover img { transform:scale(1.02); }
+        .gitem--tall, .gitem--wide { grid-column:unset; grid-row:unset; }
+        @media(max-width:768px){ .full-gallery{ columns:2; } }
+        @media(max-width:480px){ .full-gallery{ columns:1; } }
+    </style>
+</head>
+<body>
+
+    <div class="ann-bar"><span class="ann-bar__text">✦ FREE SHIPPING OVER $50 &nbsp;|&nbsp; CODE: GET10 FOR 10% OFF ✦</span></div>
+
+    <header class="hdr" id="hdr">
+        <div class="hdr__inner">
+            <button class="hdr__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+            <a href="index.html" class="hdr__logo">BagBag.</a>
+            <nav class="hdr__nav" id="mainNav">
+                <ul class="hnav__list">
+                    <li><a href="index.html" class="hnav__link">Home</a></li>
+                    <li><a href="arrivals.html" class="hnav__link">Shop</a></li>
+                    <li><a href="category.html" class="hnav__link">Categories</a></li>
+                    <li><a href="gallery.html" class="hnav__link active">Gallery</a></li>
+                    <li><a href="aboutus.html" class="hnav__link">About</a></li>
+                    <li><a href="contactus.html" class="hnav__link">Contact</a></li>
+                </ul>
+                <button class="hnav__close" id="navClose">✕</button>
+            </nav>
+            <div class="hdr__icons">
+                <button class="hdr-icon" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="hdr-icon cart-icon"><i class="fa-solid fa-bag-shopping"></i><span class="cart-badge">0</span></button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="page-hero">
+            <p class="page-hero__label">Visual Stories</p>
+            <h1 class="page-hero__title">Style <em>Gallery</em></h1>
+        </div>
+
+        <div class="gal-wrap">
+            <div class="sec-hd"><span class="sec-label">Lookbook 2026</span><h2 class="sec-title">Styled With Purpose</h2></div>
+            <div class="full-gallery">
+                <div class="gitem"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80" alt="Look 1" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=700&q=80" alt="Look 2" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=700&q=80" alt="Look 3" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80" alt="Look 4" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=700&q=80" alt="Look 5" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=700&q=80" alt="Look 6" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="https://images.unsplash.com/photo-1553531580-60ce379f8319?auto=format&fit=crop&w=700&q=80" alt="Look 7" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="https://images.unsplash.com/photo-1554336416-caeb280c4109?auto=format&fit=crop&w=700&q=80" alt="Look 8" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (3).jpeg" alt="Look 9" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (7).jpeg" alt="Look 10" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (9).jpeg" alt="Look 11" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+                <div class="gitem"><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (4).jpeg" alt="Look 12" loading="lazy"><div class="gitem__ov"><i class="fa-solid fa-expand"></i></div></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand"><a href="index.html" class="footer__logo">BagBag.</a><p>Elevating everyday carry since 2010.</p><div class="footer__soc"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
+            <div class="footer__col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="arrivals.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="aboutus.html">About</a></li></ul></div>
+            <div class="footer__col"><h4>Help</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="contactus.html">Contact</a></li><li><a href="feedback.html">Feedback</a></li></ul></div>
+            <div class="footer__col"><h4>Contact</h4><p><i class="fa-solid fa-envelope"></i> BagBagOfficial@gmail.com</p><p><i class="fa-solid fa-phone"></i> +92-390-04587381</p></div>
+        </div>
+        <div class="footer__btm"><p>&copy; 2026 BagBag. All rights reserved.</p><p>Made with <i class="fa-solid fa-heart" style="color:#C9A84C"></i> in Pakistan</p></div>
+    </footer>
+
+    <div class="lightbox" id="lightbox"><button class="lightbox__close" id="lbClose"><i class="fa-solid fa-xmark"></i></button><img class="lightbox__img" id="lbImg" src="" alt=""></div>
+    <script src="../js/bagbag.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale — Up to 70% Off — BagBag</title>
+    <meta name="description" content="Shop BagBag's biggest sale. Up to 70% off on premium leather bags.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/bag.css">
+    <style>
+        .sale-hero {
+            background: linear-gradient(135deg, #1A1A18 0%, #2C1A08 100%);
+            padding: 100px 32px 80px; text-align:center; position:relative; overflow:hidden;
+        }
+        .sale-hero::before { content:'SALE'; position:absolute; font-family:'Playfair Display',serif; font-size:22vw; font-weight:900; color:rgba(201,168,76,.06); top:50%; left:50%; transform:translate(-50%,-50%); white-space:nowrap; pointer-events:none; }
+        .sale-hero__label { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold-lt); margin-bottom:14px; }
+        .sale-hero__title { font-family:'Playfair Display',serif; font-size:clamp(2.8rem,6vw,5rem); color:#fff; margin-bottom:16px; }
+        .sale-hero__sub { font-size:1.2rem; color:rgba(255,255,255,.7); margin-bottom:36px; }
+        .countdown { display:flex; justify-content:center; gap:24px; margin-bottom:44px; }
+        .countdown__box { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.15); border-radius:12px; padding:18px 28px; text-align:center; color:#fff; backdrop-filter:blur(6px); }
+        .countdown__num { font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:900; display:block; color:var(--gold-lt); }
+        .countdown__lbl { font-size:.7rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; opacity:.6; }
+        .sale-wrap { max-width:1300px; margin:0 auto; padding:72px 32px; }
+    </style>
+</head>
+<body>
+
+    <div class="ann-bar"><span class="ann-bar__text">✦ MEGA SALE — UP TO 70% OFF &nbsp;|&nbsp; FREE SHIPPING OVER $50 ✦</span></div>
+
+    <header class="hdr" id="hdr">
+        <div class="hdr__inner">
+            <button class="hdr__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+            <a href="index.html" class="hdr__logo">BagBag.</a>
+            <nav class="hdr__nav" id="mainNav">
+                <ul class="hnav__list">
+                    <li><a href="index.html" class="hnav__link">Home</a></li>
+                    <li><a href="arrivals.html" class="hnav__link">Shop</a></li>
+                    <li><a href="category.html" class="hnav__link">Categories</a></li>
+                    <li><a href="sale.html" class="hnav__link active">Sale</a></li>
+                    <li><a href="gallery.html" class="hnav__link">Gallery</a></li>
+                    <li><a href="contactus.html" class="hnav__link">Contact</a></li>
+                </ul>
+                <button class="hnav__close" id="navClose">✕</button>
+            </nav>
+            <div class="hdr__icons">
+                <button class="hdr-icon" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="hdr-icon cart-icon"><i class="fa-solid fa-bag-shopping"></i><span class="cart-badge" id="cartBadge">0</span></button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="sale-hero">
+            <p class="sale-hero__label">Limited Time</p>
+            <h1 class="sale-hero__title">Up to <em>70% Off</em></h1>
+            <p class="sale-hero__sub">Hurry — sale ends Sunday midnight.</p>
+            <div class="countdown">
+                <div class="countdown__box"><span class="countdown__num" id="cdDays">3</span><span class="countdown__lbl">Days</span></div>
+                <div class="countdown__box"><span class="countdown__num" id="cdHrs">12</span><span class="countdown__lbl">Hours</span></div>
+                <div class="countdown__box"><span class="countdown__num" id="cdMin">45</span><span class="countdown__lbl">Minutes</span></div>
+                <div class="countdown__box"><span class="countdown__num" id="cdSec">00</span><span class="countdown__lbl">Seconds</span></div>
+            </div>
+        </div>
+
+        <div class="sale-wrap">
+            <div class="sec-hd"><span class="sec-label">Discounted</span><h2 class="sec-title">Sale Items</h2></div>
+            <div class="pgrid" id="pgrid">
+                <article class="pcard" data-cat="women sling">
+                    <div class="pcard__img-box"><span class="pcard__tag pcard__tag--sale">–76%</span><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (3).jpeg" alt="Rocco Blue" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="ROCCO 1PC - Blue" data-price="Rs 2,999" data-cat="Women · Leather" data-src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (3).jpeg">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Women · Leather</p><h3 class="pcard__name">ROCCO 1PC — Blue</h3><p class="pcard__price"><s class="pcard__old">Rs 12,499</s> Rs 2,999</p></div>
+                </article>
+                <article class="pcard" data-cat="women backpack">
+                    <div class="pcard__img-box"><span class="pcard__tag pcard__tag--sale">–76%</span><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (7).jpeg" alt="Rocco Black" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="ROCCO 1PC - Black" data-price="Rs 4,999" data-cat="Women · Leather" data-src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (7).jpeg">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Women · Leather</p><h3 class="pcard__name">ROCCO 1PC — Black</h3><p class="pcard__price"><s class="pcard__old">Rs 20,829</s> Rs 4,999</p></div>
+                </article>
+                <article class="pcard" data-cat="women sling">
+                    <div class="pcard__img-box"><span class="pcard__tag pcard__tag--sale">–76%</span><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (9).jpeg" alt="Rocco Pink" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="ROCCO 1PC - Pink" data-price="Rs 3,999" data-cat="Women · Leather" data-src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (9).jpeg">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Women · Leather</p><h3 class="pcard__name">ROCCO 1PC — Pink</h3><p class="pcard__price"><s class="pcard__old">Rs 16,662</s> Rs 3,999</p></div>
+                </article>
+                <article class="pcard" data-cat="women backpack">
+                    <div class="pcard__img-box"><span class="pcard__tag pcard__tag--sale">–76%</span><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (4).jpeg" alt="Rocco Red" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="ROCCO 1PC - Red" data-price="Rs 2,999" data-cat="Women · Leather" data-src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (4).jpeg">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Women · Leather</p><h3 class="pcard__name">ROCCO 1PC — Red</h3><p class="pcard__price"><s class="pcard__old">Rs 12,499</s> Rs 2,999</p></div>
+                </article>
+                <article class="pcard" data-cat="women backpack">
+                    <div class="pcard__img-box"><span class="pcard__tag pcard__tag--sale">–76%</span><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (6).jpeg" alt="Rocco Mustard" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="ROCCO 1PC - Mustard" data-price="Rs 7,999" data-cat="Women · Leather" data-src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (6).jpeg">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Women · Leather</p><h3 class="pcard__name">ROCCO 1PC — Mustard</h3><p class="pcard__price"><s class="pcard__old">Rs 33,329</s> Rs 7,999</p></div>
+                </article>
+                <article class="pcard" data-cat="women backpack">
+                    <div class="pcard__img-box"><span class="pcard__tag pcard__tag--sale">–76%</span><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (10).jpeg" alt="Rocco Maroon" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="ROCCO 2PC - Maroon" data-price="Rs 3,999" data-cat="Women · Leather" data-src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (10).jpeg">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Women · Leather</p><h3 class="pcard__name">ROCCO 2PC — Maroon</h3><p class="pcard__price"><s class="pcard__old">Rs 16,662</s> Rs 3,999</p></div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand"><a href="index.html" class="footer__logo">BagBag.</a><p>Elevating everyday carry since 2010.</p><div class="footer__soc"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
+            <div class="footer__col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="arrivals.html">Shop</a></li><li><a href="sale.html">Sale</a></li><li><a href="aboutus.html">About</a></li></ul></div>
+            <div class="footer__col"><h4>Help</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="contactus.html">Contact</a></li><li><a href="feedback.html">Feedback</a></li></ul></div>
+            <div class="footer__col"><h4>Contact</h4><p><i class="fa-solid fa-envelope"></i> BagBagOfficial@gmail.com</p><p><i class="fa-solid fa-phone"></i> +92-390-04587381</p></div>
+        </div>
+        <div class="footer__btm"><p>&copy; 2026 BagBag. All rights reserved.</p><p>Made with <i class="fa-solid fa-heart" style="color:#C9A84C"></i> in Pakistan</p></div>
+    </footer>
+
+    <div class="qv-backdrop" id="qvBackdrop"><div class="qv-modal" id="qvModal"><button class="qv-modal__close" id="qvClose"><i class="fa-solid fa-xmark"></i></button><div class="qv-modal__body"><div class="qv-modal__img-wrap"><img id="qvImg" src="" alt=""></div><div class="qv-modal__det"><p class="qv-modal__cat" id="qvCat"></p><h2 class="qv-modal__title" id="qvTitle"></h2><p class="qv-modal__price" id="qvPrice"></p><ul class="qv-modal__specs"><li><strong>Material:</strong> Full-Grain Leather</li><li><strong>Hardware:</strong> Solid Brass</li></ul><button class="btn btn--dark" style="width:100%;justify-content:center;margin-top:24px;" id="qvAddCart">Add to Cart</button></div></div></div></div>
+
+    <script src="../js/bagbag.js"></script>
+    <script>
+        // Countdown timer
+        const end = new Date(); end.setDate(end.getDate() + 3);
+        setInterval(() => {
+            const diff = end - new Date();
+            if (diff < 0) return;
+            document.getElementById('cdDays').textContent = String(Math.floor(diff/86400000)).padStart(2,'0');
+            document.getElementById('cdHrs').textContent  = String(Math.floor(diff%86400000/3600000)).padStart(2,'0');
+            document.getElementById('cdMin').textContent  = String(Math.floor(diff%3600000/60000)).padStart(2,'0');
+            document.getElementById('cdSec').textContent  = String(Math.floor(diff%60000/1000)).padStart(2,'0');
+        }, 1000);
+    </script>
+</body>
+</html>

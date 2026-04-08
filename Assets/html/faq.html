@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — BagBag</title>
+    <meta name="description" content="Frequently asked questions about BagBag orders, shipping, returns, and product care.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/bag.css">
+    <style>
+        .faq-hero { background:var(--charcoal); padding:96px 32px 80px; text-align:center; }
+        .faq-hero__label { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold-lt); margin-bottom:14px; }
+        .faq-hero__title { font-family:'Playfair Display',serif; font-size:clamp(2.4rem,5vw,4rem); color:#fff; }
+        .faq-hero__sub { font-size:1.1rem; color:rgba(255,255,255,.65); margin-top:14px; }
+        .faq-wrap { max-width:900px; margin:0 auto; padding:80px 32px; }
+        .faq-cat { margin-bottom:56px; }
+        .faq-cat__title { font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--charcoal); margin-bottom:24px; padding-bottom:14px; border-bottom:2px solid var(--border); display:flex; align-items:center; gap:14px; }
+        .faq-cat__title i { color:var(--gold); font-size:1.4rem; }
+        .faq-cta { background:var(--charcoal); border-radius:20px; padding:56px 40px; text-align:center; margin-top:40px; }
+        .faq-cta h3 { font-family:'Playfair Display',serif; font-size:2rem; color:#fff; margin-bottom:14px; }
+        .faq-cta p { color:rgba(255,255,255,.6); margin-bottom:28px; font-size:1.05rem; }
+    </style>
+</head>
+<body>
+
+    <div class="ann-bar"><span class="ann-bar__text">✦ FREE SHIPPING OVER $50 &nbsp;|&nbsp; CODE: GET10 FOR 10% OFF ✦</span></div>
+
+    <header class="hdr" id="hdr">
+        <div class="hdr__inner">
+            <button class="hdr__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+            <a href="index.html" class="hdr__logo">BagBag.</a>
+            <nav class="hdr__nav" id="mainNav">
+                <ul class="hnav__list">
+                    <li><a href="index.html" class="hnav__link">Home</a></li>
+                    <li><a href="arrivals.html" class="hnav__link">Shop</a></li>
+                    <li><a href="category.html" class="hnav__link">Categories</a></li>
+                    <li><a href="gallery.html" class="hnav__link">Gallery</a></li>
+                    <li><a href="aboutus.html" class="hnav__link">About</a></li>
+                    <li><a href="contactus.html" class="hnav__link">Contact</a></li>
+                </ul>
+                <button class="hnav__close" id="navClose">✕</button>
+            </nav>
+            <div class="hdr__icons">
+                <button class="hdr-icon" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="hdr-icon cart-icon"><i class="fa-solid fa-bag-shopping"></i><span class="cart-badge">0</span></button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="faq-hero">
+            <p class="faq-hero__label">Help Center</p>
+            <h1 class="faq-hero__title">Frequently <em>Asked</em></h1>
+            <p class="faq-hero__sub">Everything you need to know about BagBag.</p>
+        </div>
+
+        <div class="faq-wrap">
+
+            <div class="faq-cat">
+                <h2 class="faq-cat__title"><i class="fa-solid fa-truck-fast"></i> Shipping & Delivery</h2>
+                <div class="faq__list">
+                    <div class="faq__item">
+                        <button class="faq__q">Do you offer international shipping? <i class="fa-solid fa-plus faq__ico"></i></button>
+                        <div class="faq__ans"><p>Yes — we ship worldwide. Delivery times vary by region. Most orders arrive within 7–14 business days internationally, and 3–5 days within Pakistan.</p></div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__q">How much does shipping cost? <i class="fa-solid fa-plus faq__ico"></i></button>
+                        <div class="faq__ans"><p>Shipping is FREE on all orders over Rs 5,000 within Pakistan. International shipping rates are calculated at checkout based on weight and destination.</p></div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__q">How do I track my order? <i class="fa-solid fa-plus faq__ico"></i></button>
+                        <div class="faq__ans"><p>Once your order ships, you'll receive a tracking number via email. You can use this to track your package directly on the courier's website.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cat">
+                <h2 class="faq-cat__title"><i class="fa-solid fa-rotate-left"></i> Returns & Refunds</h2>
+                <div class="faq__list">
+                    <div class="faq__item">
+                        <button class="faq__q">What is your return policy? <i class="fa-solid fa-plus faq__ico"></i></button>
+                        <div class="faq__ans"><p>We accept returns within 30 days of purchase for unused items in their original packaging. Sale items are final sale and cannot be returned.</p></div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__q">How long does a refund take? <i class="fa-solid fa-plus faq__ico"></i></button>
+                        <div class="faq__ans"><p>Refunds are processed within 5–7 business days after we receive and inspect the returned item. You will be notified via email once approved.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cat">
+                <h2 class="faq-cat__title"><i class="fa-solid fa-hand-sparkles"></i> Product & Care</h2>
+                <div class="faq__list">
+                    <div class="faq__item">
+                        <button class="faq__q">How do I care for my leather bag? <i class="fa-solid fa-plus faq__ico"></i></button>
+                        <div class="faq__ans"><p>Apply a leather conditioner every 6 months. Avoid prolonged exposure to direct sunlight or rain. Store in a dust bag when not in use. Wipe with a dry cloth after use.</p></div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__q">Are your bags covered by a warranty? <i class="fa-solid fa-plus faq__ico"></i></button>
+                        <div class="faq__ans"><p>All premium leather bags come with a lifetime warranty against manufacturing defects. This does not cover normal wear and tear or damage caused by misuse.</p></div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__q">Are your products ethically sourced? <i class="fa-solid fa-plus faq__ico"></i></button>
+                        <div class="faq__ans"><p>Absolutely. We source our leathers from certified tanneries that follow ethical and environmental standards. Our artisans are fairly compensated for their craftsmanship.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cat">
+                <h2 class="faq-cat__title"><i class="fa-solid fa-credit-card"></i> Orders & Payment</h2>
+                <div class="faq__list">
+                    <div class="faq__item">
+                        <button class="faq__q">What payment methods do you accept? <i class="fa-solid fa-plus faq__ico"></i></button>
+                        <div class="faq__ans"><p>We accept all major credit/debit cards, bank transfers, JazzCash, EasyPaisa, and Cash on Delivery within Pakistan.</p></div>
+                    </div>
+                    <div class="faq__item">
+                        <button class="faq__q">Can I change or cancel my order? <i class="fa-solid fa-plus faq__ico"></i></button>
+                        <div class="faq__ans"><p>Orders can be cancelled or modified within 2 hours of placement. After that, we can no longer make changes as the order may already be in processing. Please contact us immediately at BagBagOfficial@gmail.com.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta">
+                <h3>Still have questions?</h3>
+                <p>Our team is always happy to help. Reach out and we'll respond within 24 hours.</p>
+                <a href="contactus.html" class="btn btn--gold">Contact Us &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand"><a href="index.html" class="footer__logo">BagBag.</a><p>Elevating everyday carry since 2010.</p><div class="footer__soc"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
+            <div class="footer__col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="arrivals.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="aboutus.html">About</a></li></ul></div>
+            <div class="footer__col"><h4>Help</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="contactus.html">Contact</a></li><li><a href="feedback.html">Feedback</a></li></ul></div>
+            <div class="footer__col"><h4>Contact</h4><p><i class="fa-solid fa-envelope"></i> BagBagOfficial@gmail.com</p><p><i class="fa-solid fa-phone"></i> +92-390-04587381</p></div>
+        </div>
+        <div class="footer__btm"><p>&copy; 2026 BagBag. All rights reserved.</p><p>Made with <i class="fa-solid fa-heart" style="color:#C9A84C"></i> in Pakistan</p></div>
+    </footer>
+    <script src="../js/bagbag.js"></script>
+</body>
+</html>

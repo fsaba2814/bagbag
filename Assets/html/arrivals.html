@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals — BagBag</title>
+    <meta name="description" content="Shop the latest handcrafted bag arrivals at BagBag.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/bag.css">
+    <style>
+        .page-hero { background:var(--charcoal); padding:96px 32px 80px; text-align:center; }
+        .page-hero__label { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold-lt); margin-bottom:14px; }
+        .page-hero__title { font-family:'Playfair Display',serif; font-size:clamp(2.4rem,5vw,4rem); color:#fff; }
+        .arrivals-wrap { max-width:1300px; margin:0 auto; padding:72px 32px; }
+        .arr-sort { display:flex; justify-content:space-between; align-items:center; margin-bottom:44px; flex-wrap:wrap; gap:16px; }
+        .arr-sort select { padding:10px 18px; border:1.5px solid var(--border); border-radius:8px; background:var(--white); font-family:'DM Sans',sans-serif; font-size:.9rem; color:var(--charcoal); }
+    </style>
+</head>
+<body>
+
+    <div class="ann-bar"><span class="ann-bar__text">✦ FREE SHIPPING OVER $50 &nbsp;|&nbsp; CODE: GET10 FOR 10% OFF ✦</span></div>
+
+    <header class="hdr" id="hdr">
+        <div class="hdr__inner">
+            <button class="hdr__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+            <a href="index.html" class="hdr__logo">BagBag.</a>
+            <nav class="hdr__nav" id="mainNav">
+                <ul class="hnav__list">
+                    <li><a href="index.html" class="hnav__link">Home</a></li>
+                    <li><a href="arrivals.html" class="hnav__link active">Shop</a></li>
+                    <li><a href="category.html" class="hnav__link">Categories</a></li>
+                    <li><a href="gallery.html" class="hnav__link">Gallery</a></li>
+                    <li><a href="aboutus.html" class="hnav__link">About</a></li>
+                    <li><a href="contactus.html" class="hnav__link">Contact</a></li>
+                </ul>
+                <button class="hnav__close" id="navClose">✕</button>
+            </nav>
+            <div class="hdr__icons">
+                <button class="hdr-icon" id="searchOpen"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hdr-icon" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="hdr-icon cart-icon"><i class="fa-solid fa-bag-shopping"></i><span class="cart-badge" id="cartBadge">0</span></button>
+            </div>
+        </div>
+        <div class="search-drop" id="searchDrop">
+            <div class="search-drop__inner"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search bags…" class="search-drop__input"><button class="search-drop__close" id="searchClose"><i class="fa-solid fa-xmark"></i></button></div>
+        </div>
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main>
+        <div class="page-hero">
+            <p class="page-hero__label">Fresh Drops</p>
+            <h1 class="page-hero__title">New Arrivals</h1>
+        </div>
+
+        <div class="arrivals-wrap">
+            <div class="arr-sort">
+                <div class="filters" id="filters" style="margin-bottom:0;">
+                    <button class="fpill active" data-filter="all">All</button>
+                    <button class="fpill" data-filter="men">Men</button>
+                    <button class="fpill" data-filter="women">Women</button>
+                    <button class="fpill" data-filter="backpack">Backpacks</button>
+                    <button class="fpill" data-filter="sling">Sling Bags</button>
+                </div>
+                <select><option>Sort: Newest First</option><option>Price: Low to High</option><option>Price: High to Low</option></select>
+            </div>
+
+            <div class="pgrid" id="pgrid">
+                <article class="pcard" data-cat="men backpack">
+                    <div class="pcard__img-box"><span class="pcard__tag">New</span><img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=600&q=80" alt="Urban Pack" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="Urban Explorer Pack" data-price="Rs 12,900" data-cat="Men · Backpack" data-src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Men · Backpack</p><h3 class="pcard__name">Urban Explorer Pack</h3><p class="pcard__price">Rs 12,900</p></div>
+                </article>
+                <article class="pcard" data-cat="women sling">
+                    <div class="pcard__img-box"><span class="pcard__tag pcard__tag--sale">–20%</span><img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=600&q=80" alt="Sling" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="Elegant Leather Sling" data-price="Rs 6,900" data-cat="Women · Sling" data-src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=800&q=80">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Women · Sling</p><h3 class="pcard__name">Elegant Leather Sling</h3><p class="pcard__price"><s class="pcard__old">Rs 8,900</s> Rs 6,900</p></div>
+                </article>
+                <article class="pcard" data-cat="men sling">
+                    <div class="pcard__img-box"><img src="https://images.unsplash.com/photo-1554336416-caeb280c4109?auto=format&fit=crop&w=600&q=80" alt="Crossbody" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="Minimalist Crossbody" data-price="Rs 5,500" data-cat="Men · Sling" data-src="https://images.unsplash.com/photo-1554336416-caeb280c4109?auto=format&fit=crop&w=800&q=80">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Men · Sling</p><h3 class="pcard__name">Minimalist Crossbody</h3><p class="pcard__price">Rs 5,500</p></div>
+                </article>
+                <article class="pcard" data-cat="women backpack">
+                    <div class="pcard__img-box"><span class="pcard__tag pcard__tag--hot">Hot</span><img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=600&q=80" alt="Canvas" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="Classic Canvas Backpack" data-price="Rs 9,500" data-cat="Women · Backpack" data-src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=800&q=80">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Women · Backpack</p><h3 class="pcard__name">Classic Canvas Backpack</h3><p class="pcard__price">Rs 9,500</p></div>
+                </article>
+                <article class="pcard" data-cat="men backpack">
+                    <div class="pcard__img-box"><img src="https://images.unsplash.com/photo-1553531580-60ce379f8319?auto=format&fit=crop&w=600&q=80" alt="Nomad" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="Nomad Travel Pack" data-price="Rs 14,500" data-cat="Men · Travel" data-src="https://images.unsplash.com/photo-1553531580-60ce379f8319?auto=format&fit=crop&w=800&q=80">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Men · Travel</p><h3 class="pcard__name">Nomad Travel Pack</h3><p class="pcard__price">Rs 14,500</p></div>
+                </article>
+                <article class="pcard" data-cat="women backpack">
+                    <div class="pcard__img-box"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80" alt="Tote" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="Premium Leather Tote" data-price="Rs 21,000" data-cat="Women · Tote" data-src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Women · Tote</p><h3 class="pcard__name">Premium Leather Tote</h3><p class="pcard__price">Rs 21,000</p></div>
+                </article>
+                <article class="pcard" data-cat="men backpack">
+                    <div class="pcard__img-box"><span class="pcard__tag">New</span><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (3).jpeg" alt="Rocco Blue" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="ROCCO 1PC - Blue" data-price="Rs 2,999" data-cat="Men · Leather" data-src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (3).jpeg">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Men · Leather</p><h3 class="pcard__name">ROCCO 1PC — Blue</h3><p class="pcard__price">Rs 2,999</p></div>
+                </article>
+                <article class="pcard" data-cat="women backpack">
+                    <div class="pcard__img-box"><span class="pcard__tag pcard__tag--sale">SAVE 76%</span><img src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (7).jpeg" alt="Rocco Black" class="pcard__img" loading="lazy"><div class="pcard__hover"><button class="pcard__qv" data-title="ROCCO 1PC - Black" data-price="Rs 4,999" data-cat="Women · Leather" data-src="../images/WhatsApp Image 2026-03-16 at 1.57.42 PM (7).jpeg">Quick View</button><button class="pcard__wish"><i class="fa-regular fa-heart"></i></button></div></div>
+                    <div class="pcard__info"><p class="pcard__cat">Women · Leather</p><h3 class="pcard__name">ROCCO 1PC — Black</h3><p class="pcard__price">Rs 4,999</p></div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand"><a href="index.html" class="footer__logo">BagBag.</a><p>Elevating everyday carry since 2010.</p><div class="footer__soc"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
+            <div class="footer__col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="arrivals.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="aboutus.html">About</a></li></ul></div>
+            <div class="footer__col"><h4>Help</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="contactus.html">Contact</a></li><li><a href="feedback.html">Feedback</a></li></ul></div>
+            <div class="footer__col"><h4>Contact</h4><p><i class="fa-solid fa-envelope"></i> BagBagOfficial@gmail.com</p><p><i class="fa-solid fa-phone"></i> +92-390-04587381</p></div>
+        </div>
+        <div class="footer__btm"><p>&copy; 2026 BagBag. All rights reserved.</p><p>Made with <i class="fa-solid fa-heart" style="color:#C9A84C"></i> in Pakistan</p></div>
+    </footer>
+
+    <div class="qv-backdrop" id="qvBackdrop"><div class="qv-modal" id="qvModal"><button class="qv-modal__close" id="qvClose"><i class="fa-solid fa-xmark"></i></button><div class="qv-modal__body"><div class="qv-modal__img-wrap"><img id="qvImg" src="" alt=""></div><div class="qv-modal__det"><p class="qv-modal__cat" id="qvCat"></p><h2 class="qv-modal__title" id="qvTitle"></h2><p class="qv-modal__price" id="qvPrice"></p><p class="qv-modal__desc">Premium handcrafted full-grain leather. Only gets better with age.</p><ul class="qv-modal__specs"><li><strong>Material:</strong> Full-Grain Leather</li><li><strong>Hardware:</strong> Solid Brass</li><li><strong>Lining:</strong> Canvas</li></ul><button class="btn btn--dark" style="width:100%;justify-content:center;margin-top:24px;" id="qvAddCart">Add to Cart</button></div></div></div></div>
+    <script src="../js/bagbag.js"></script>
+</body>
+</html>
